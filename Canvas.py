@@ -10,7 +10,7 @@ class Canvas:
         for y in range(self.game_map.height):
             for x in range(self.game_map.width):
                 if (self.game_map.map[y][x] == 0):
-                    print("🧃", end =" ")
+                    print("⬜", end =" ")
                 elif (self.game_map.map[y][x] == "c"):
                     print("🐱", end =" ")
                 elif (self.game_map.map[y][x] == "m"):

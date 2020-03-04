@@ -16,7 +16,7 @@ def main():
         print("Calculating cat path according to mouse path...")
         print("Maximum", Searches.MAX_BLIND_SEARCHES, "searches for blind search")
         print("Maximum", Searches.MAX_INTELLIGENT_SEARCHES, "searches for a* search")
-        game_state_manager.run("b")
+        game_state_manager.run("a")
         game_over = game_state_manager.game_map.game_over
         if game_over == False:
             print("Mouse won!")

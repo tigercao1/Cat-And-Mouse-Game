@@ -28,7 +28,7 @@ class IntelligentSearchGameState(BlindSearchGameState):
     def __init__(self, mouse_pos, cat, parent_state, move_count, mouse_path):
         BlindSearchGameState.__init__(self, mouse_pos, cat, parent_state, move_count)
         self.mouse_path = mouse_path
-        self.estimate = self.heuristic1()
+        self.estimate = self.heuristic3()
         self.cost = self.move_count + self.estimate
         self.children = []
         

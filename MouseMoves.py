@@ -1,4 +1,5 @@
 from enum import Enum
+
 class MouseMoves(Enum):
     UP_LEFT = [-1, -1]
     UP = [0, -1]

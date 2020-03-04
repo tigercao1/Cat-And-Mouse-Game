@@ -49,22 +49,23 @@ class GameStateManager:
     def generate_resources(self):
         unique_random_positions = self.generate_unique_random_positions()
         self.cheese_pos = []
-        self.cheese_pos = [[5, 6], [1, 8], [1, 2]]
-        self.cat = Cat([9, 4])
-        self.mouse = Mouse([8, 11])
 
-        # self.cheese_pos = [[6,0],[6,6],[4,9]]
-        # self.cat = Cat([11,11])
-        # self.mouse = Mouse([11,1])
+        # self.cheese_pos = [[16, 21], [16, 5], [7, 18]]
+        # self.cat = Cat([21, 8])
+        # self.mouse = Mouse([21, 16])
+
+        # self.cheese_pos = [[7, 11], [20, 14], [11, 27]]
+        # self.cat = Cat([4, 20])
+        # self.mouse = Mouse([4, 6])
         
-        # for i in range(self.num_of_cheese + 2):
+        for i in range(self.num_of_cheese + 2):
             
-        #     if i < self.num_of_cheese:
-        #         self.cheese_pos.append(unique_random_positions[i])
-        #     elif i < self.num_of_cheese + 1:
-        #         self.cat = Cat(unique_random_positions[i])
-        #     else:
-        #         self.mouse = Mouse(unique_random_positions[i])
+            if i < self.num_of_cheese:
+                self.cheese_pos.append(unique_random_positions[i])
+            elif i < self.num_of_cheese + 1:
+                self.cat = Cat(unique_random_positions[i])
+            else:
+                self.mouse = Mouse(unique_random_positions[i])
 
     def run(self, search_type):
         self.move(search_type)
